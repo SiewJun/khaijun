@@ -4,6 +4,10 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <NavBar />
-  <RouterView />
+  <div class="min-h-screen bg-background">
+    <NavBar />
+    <main class="pt-24 container mx-auto px-4">
+      <RouterView />
+    </main>
+  </div>
 </template>
