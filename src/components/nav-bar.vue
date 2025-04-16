@@ -23,7 +23,7 @@
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuLink class="bg-primary-foreground rounded-full">
+              <NavigationMenuLink>
                 <RouterLink to="/contact">Contact</RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -46,4 +46,5 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu'
+import ThemeToggle from '@/components/theme-toggle.vue'
 </script>
