@@ -1,6 +1,6 @@
 <template>
   <!-- Desktop navigation (md and above) -->
-  <div class="fixed top-4 left-0 right-0 z-50 hidden md:flex justify-center">
+  <div class="fixed top-4 left-0 right-0 z-40 hidden md:flex justify-center">
     <nav class="backdrop-blur-md bg-background/80 border rounded-full shadow-lg px-6 py-3 mx-auto">
       <NavigationMenu>
         <NavigationMenuList class="font-medium">
