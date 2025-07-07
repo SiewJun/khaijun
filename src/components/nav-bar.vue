@@ -1,38 +1,114 @@
 <template>
-  <div class="fixed top-4 left-0 right-0 z-50 flex justify-center">
-    <nav class="backdrop-blur-md bg-background/70 border rounded-full shadow-md px-6 py-2 mx-auto">
-      <div class="flex items-center justify-between gap-6">
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink class="hover:bg-transparent">
-                <RouterLink to="/">Home</RouterLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+  <!-- Desktop navigation (md and above) -->
+  <div class="fixed top-4 left-0 right-0 z-50 hidden md:flex justify-center">
+    <nav class="backdrop-blur-md bg-background/80 border rounded-full shadow-lg px-6 py-3 mx-auto">
+      <NavigationMenu>
+        <NavigationMenuList class="font-medium">
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <RouterLink
+                to="/"
+                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
+                :class="{ 'bg-primary text-primary-foreground': $route.name === 'home' }"
+              >
+                Home
+              </RouterLink>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink class="hover:bg-transparent">
-                <RouterLink to="/work">Work</RouterLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <RouterLink
+                to="/work"
+                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
+                :class="{ 'bg-primary text-primary-foreground': $route.name === 'work' }"
+              >
+                Work
+              </RouterLink>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink class="hover:bg-transparent">
-                <RouterLink to="/experience">Experience</RouterLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <RouterLink
+                to="/career"
+                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
+                :class="{ 'bg-primary text-primary-foreground': $route.name === 'career' }"
+              >
+                Career
+              </RouterLink>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
 
-            <NavigationMenuItem>
-              <NavigationMenuLink>
-                <RouterLink to="/contact">Contact</RouterLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <RouterLink
+                to="/contact"
+                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
+                :class="{ 'bg-primary text-primary-foreground': $route.name === 'contact' }"
+              >
+                Contact
+              </RouterLink>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </nav>
+  </div>
 
-        <div class="flex items-center gap-2">
-          <ThemeToggle />
-        </div>
+  <!-- Mobile navigation (below md) -->
+  <div class="md:hidden fixed bottom-4 left-0 right-0 z-50 flex justify-center">
+    <nav
+      class="backdrop-blur-md bg-background/80 border rounded-full shadow-lg px-6 py-3 mx-4 w-full max-w-md"
+    >
+      <div class="flex items-center justify-between">
+        <RouterLink
+          to="/"
+          class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
+          :class="{
+            'text-primary': $route.name === 'home',
+            'text-muted-foreground': $route.name !== 'home',
+          }"
+        >
+          <Home class="w-5 h-5" />
+          <span class="text-xs font-medium">Home</span>
+        </RouterLink>
+
+        <RouterLink
+          to="/work"
+          class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
+          :class="{
+            'text-primary': $route.name === 'work',
+            'text-muted-foreground': $route.name !== 'work',
+          }"
+        >
+          <Briefcase class="w-5 h-5" />
+          <span class="text-xs font-medium">Work</span>
+        </RouterLink>
+
+        <RouterLink
+          to="/career"
+          class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
+          :class="{
+            'text-primary': $route.name === 'career',
+            'text-muted-foreground': $route.name !== 'career',
+          }"
+        >
+          <GraduationCap class="w-5 h-5" />
+          <span class="text-xs font-medium">Career</span>
+        </RouterLink>
+
+        <RouterLink
+          to="/contact"
+          class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
+          :class="{
+            'text-primary': $route.name === 'contact',
+            'text-muted-foreground': $route.name !== 'contact',
+          }"
+        >
+          <Mail class="w-5 h-5" />
+          <span class="text-xs font-medium">Contact</span>
+        </RouterLink>
       </div>
     </nav>
   </div>
@@ -40,11 +116,11 @@
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { Home, Briefcase, GraduationCap, Mail } from 'lucide-vue-next'
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
 } from '@/components/ui/navigation-menu'
-import ThemeToggle from '@/components/theme-toggle.vue'
 </script>
