@@ -1,5 +1,16 @@
 import './assets/main.css'
 
+function initTheme() {
+  const savedTheme = localStorage.getItem('ui-theme')
+
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const isDark = savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark)
+
+  document.documentElement.classList.toggle('dark', isDark)
+}
+
+initTheme()
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
