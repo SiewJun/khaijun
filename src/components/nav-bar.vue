@@ -19,11 +19,11 @@
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <RouterLink
-                to="/work"
+                to="/career"
                 class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{ 'bg-primary text-primary-foreground': $route.name === 'work' }"
+                :class="{ 'bg-primary text-primary-foreground': $route.name === 'career' }"
               >
-                Work
+                Career
               </RouterLink>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -31,11 +31,11 @@
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <RouterLink
-                to="/career"
+                to="/projects"
                 class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{ 'bg-primary text-primary-foreground': $route.name === 'career' }"
+                :class="{ 'bg-primary text-primary-foreground': $route.name === 'projects' }"
               >
-                Career
+                Projects
               </RouterLink>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -75,18 +75,6 @@
         </RouterLink>
 
         <RouterLink
-          to="/work"
-          class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
-          :class="{
-            'text-primary': $route.name === 'work',
-            'text-muted-foreground': $route.name !== 'work',
-          }"
-        >
-          <Briefcase class="w-5 h-5" />
-          <span class="text-xs font-medium">Work</span>
-        </RouterLink>
-
-        <RouterLink
           to="/career"
           class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
           :class="{
@@ -96,6 +84,31 @@
         >
           <GraduationCap class="w-5 h-5" />
           <span class="text-xs font-medium">Career</span>
+        </RouterLink>
+
+        <RouterLink
+          to="/projects"
+          class="flex flex-col items-center gap-1 px-3 py-2 rounded-full transition-colors"
+          :class="{
+            'text-primary': $route.name === 'projects',
+            'text-muted-foreground': $route.name !== 'projects',
+          }"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 10c-4.418 0-8-1.79-8-4V6a2 2 0 012-2h12a2 2 0 012 2v8c0 2.21-3.582 4-8 4z"
+            />
+          </svg>
+          <span class="text-xs font-medium">Projects</span>
         </RouterLink>
 
         <RouterLink
@@ -116,7 +129,7 @@
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { Home, Briefcase, GraduationCap, Mail } from 'lucide-vue-next'
+import { Home, GraduationCap, Mail } from 'lucide-vue-next'
 import {
   NavigationMenu,
   NavigationMenuList,

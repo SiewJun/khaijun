@@ -76,19 +76,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Availability -->
-        <div class="bg-card rounded-lg border p-6 shadow-sm">
-          <h3 class="text-xl font-semibold text-foreground mb-2">Availability</h3>
-          <p class="text-muted-foreground mb-4">
-            I'm currently undertaking a 6-month internship and actively seeking full-time positions
-            upon graduation. Open to discussing exciting opportunities and projects.
-          </p>
-          <div class="flex items-center gap-2">
-            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-            <span class="text-sm text-foreground">Available for new opportunities</span>
-          </div>
-        </div>
       </div>
 
       <!-- Contact Form -->
@@ -162,12 +149,7 @@
             ></textarea>
           </div>
 
-          <button
-            type="submit"
-            class="w-full bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-colors"
-          >
-            Send Message
-          </button>
+          <Button type="submit" class="w-full"> Send Message </Button>
         </form>
       </div>
     </div>
@@ -176,4 +158,5 @@
 
 <script setup lang="ts">
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 </script>

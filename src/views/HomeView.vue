@@ -32,74 +32,10 @@
       </div>
 
       <!-- Recent Work Preview -->
-      <div>
-        <div class="flex items-center justify-between mb-2">
-          <h2 class="text-base font-semibold text-muted-foreground">Featured Projects</h2>
-          <RouterLink
-            to="/work"
-            class="text-muted-foreground hover:text-primary text-xs font-normal underline underline-offset-2"
-          >
-            View All →
-          </RouterLink>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div class="bg-card rounded border border-muted shadow-sm p-3 flex items-center gap-3">
-            <div class="flex-shrink-0 flex flex-col items-center">
-              <BotMessageSquare class="w-5 h-5 text-primary/70 mb-1" />
-              <span class="text-[10px] text-muted-foreground">AI Assistant</span>
-            </div>
-            <div>
-              <div class="text-sm font-medium text-foreground mb-0.5">AI Assistant Project</div>
-              <div class="text-xs text-muted-foreground mb-1">
-                Frontend for an AI assistant in a greenfield Employee Trust Fund's mobile app.
-              </div>
-              <div class="flex flex-wrap gap-1">
-                <span class="px-1.5 py-0.5 bg-primary/10 text-primary rounded-full text-[10px]"
-                  >Vue.js</span
-                >
-                <span class="px-1.5 py-0.5 bg-primary/10 text-primary rounded-full text-[10px]"
-                  >TypeScript</span
-                >
-                <span class="px-1.5 py-0.5 bg-primary/10 text-primary rounded-full text-[10px]"
-                  >AI</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-card rounded border border-muted shadow-sm p-3 flex items-center gap-3">
-            <div class="flex-shrink-0 flex flex-col items-center">
-              <CheckSquare class="w-5 h-5 text-primary/70 mb-1" />
-              <span class="text-[10px] text-muted-foreground">EcoSync</span>
-            </div>
-            <div>
-              <div class="text-sm font-medium text-foreground mb-0.5">
-                EcoSync Final Year Project
-              </div>
-              <div class="text-xs text-muted-foreground mb-1">
-                Platform connecting consumers with solar companies for quotations and communication.
-              </div>
-              <div class="flex flex-wrap gap-1">
-                <span class="px-1.5 py-0.5 bg-primary/10 text-primary rounded-full text-[10px]"
-                  >PERN</span
-                >
-                <span class="px-1.5 py-0.5 bg-primary/10 text-primary rounded-full text-[10px]"
-                  >Maps</span
-                >
-                <span class="px-1.5 py-0.5 bg-primary/10 text-primary rounded-full text-[10px]"
-                  >Stripe</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { BotMessageSquare, CheckSquare } from 'lucide-vue-next'
 </script>
