@@ -2,9 +2,7 @@
   <div class="max-w-4xl mx-auto">
     <div class="mb-12">
       <h1 class="text-4xl font-bold text-foreground mb-4">Education & Career</h1>
-      <p class="text-lg text-muted-foreground">
-        My educational background, career progression, and work experience
-      </p>
+      <p class="text-lg text-muted-foreground">My work experience and educational background</p>
     </div>
 
     <div class="space-y-8">

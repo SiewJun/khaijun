@@ -1,15 +1,15 @@
 <template>
   <!-- Desktop navigation (md and above) -->
   <div class="fixed top-4 left-0 right-0 z-40 hidden md:flex justify-center">
-    <nav class="backdrop-blur-md bg-background/80 border rounded-full shadow-lg px-6 py-3 mx-auto">
+    <nav class="backdrop-blur-md bg-background/30 border rounded-full shadow-lg px-6 py-3 mx-auto">
       <NavigationMenu>
         <NavigationMenuList class="font-medium">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <RouterLink
                 to="/"
-                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{ 'bg-primary text-primary-foreground': $route.name === 'home' }"
+                class="px-4 py-2 rounded-full transition-colors hover:text-accent-foreground"
+                :class="{ 'text-primary': $route.name === 'home' }"
               >
                 Home
               </RouterLink>
@@ -20,8 +20,8 @@
             <NavigationMenuLink asChild>
               <RouterLink
                 to="/career"
-                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{ 'bg-primary text-primary-foreground': $route.name === 'career' }"
+                class="px-4 py-2 rounded-full transition-colors hover:text-accent-foreground"
+                :class="{ 'text-primary': $route.name === 'career' }"
               >
                 Career
               </RouterLink>
@@ -32,8 +32,8 @@
             <NavigationMenuLink asChild>
               <RouterLink
                 to="/projects"
-                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{ 'bg-primary text-primary-foreground': $route.name === 'projects' }"
+                class="px-4 py-2 rounded-full transition-colors hover:text-accent-foreground"
+                :class="{ 'text-primary': $route.name === 'projects' }"
               >
                 Projects
               </RouterLink>
@@ -44,8 +44,8 @@
             <NavigationMenuLink asChild>
               <RouterLink
                 to="/contact"
-                class="px-4 py-2 rounded-full transition-colors hover:bg-accent hover:text-accent-foreground"
-                :class="{ 'bg-primary text-primary-foreground': $route.name === 'contact' }"
+                class="px-4 py-2 rounded-full transition-colors hover:text-accent-foreground"
+                :class="{ 'text-primary': $route.name === 'contact' }"
               >
                 Contact
               </RouterLink>
