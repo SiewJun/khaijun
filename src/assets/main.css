@@ -125,22 +125,53 @@
 @layer utilities {
   /* Responsive Typography Utilities */
   .text-responsive-hero {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
   }
 
   .text-responsive-heading {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
   }
 
   .text-responsive-subheading {
-    @apply text-lg sm:text-xl md:text-2xl;
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
   }
 
   .text-responsive-body {
-    @apply text-sm sm:text-base md:text-lg;
+    @apply text-base sm:text-lg leading-relaxed;
   }
 
   .text-responsive-small {
-    @apply text-xs sm:text-sm md:text-base;
+    @apply text-sm sm:text-base;
+  }
+
+  /* Unified spacing utilities */
+  .section-spacing {
+    @apply py-16 sm:py-20 md:py-24;
+  }
+
+  .content-spacing {
+    @apply space-y-8 sm:space-y-12;
+  }
+
+  .card-spacing {
+    @apply space-y-6;
+  }
+
+  /* Unified card styles */
+  .unified-card {
+    @apply bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .skill-tag {
+    @apply px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20;
+  }
+
+  /* Better contrast and readability */
+  .text-emphasis {
+    @apply text-foreground/90;
+  }
+
+  .text-subtle {
+    @apply text-muted-foreground/80;
   }
 }

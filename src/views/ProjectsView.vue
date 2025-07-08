@@ -1,42 +1,34 @@
 <template>
-  <div class="max-w-4xl mx-auto">
-    <HeaderContainer
-      title="Personal Projects"
-      subtitle="A showcase of my personal, academic, and self-learning projects."
-    />
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div
-        v-for="project in projects"
-        :key="project.title"
-        class="bg-card rounded-lg border p-6 shadow-sm flex flex-col"
-      >
+  <SectionContainer
+    title="Personal Projects"
+    subtitle="A showcase of my personal, academic, and self-learning projects"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div v-for="project in projects" :key="project.title" class="unified-card">
         <img
           v-if="project.image"
           :src="project.image"
           :alt="project.title"
-          class="mb-4 rounded-lg object-cover w-full h-40"
+          class="mb-6 rounded-lg object-cover w-full h-48 border border-border/50"
         />
-        <h3 class="text-responsive-subheading font-semibold text-foreground mb-2">
-          {{ project.title }}
-        </h3>
-        <p class="text-responsive-body text-muted-foreground mb-4">
-          {{ project.description }}
-        </p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span
-            v-for="tag in project.tags"
-            :key="tag"
-            class="px-3 py-1 bg-primary/10 text-primary rounded-full text-responsive-small"
-            >{{ tag }}</span
-          >
+
+        <div class="space-y-4">
+          <h3 class="text-responsive-subheading text-emphasis">
+            {{ project.title }}
+          </h3>
+          <p class="text-responsive-body text-subtle leading-relaxed">
+            {{ project.description }}
+          </p>
+          <SkillTags :items="project.tags" />
         </div>
       </div>
     </div>
-  </div>
+  </SectionContainer>
 </template>
 
 <script setup lang="ts">
-import HeaderContainer from '@/components/HeaderContainer.vue'
+import SectionContainer from '@/components/SectionContainer.vue'
+import SkillTags from '@/components/SkillTags.vue'
 
 const projects = [
   {

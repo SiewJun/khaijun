@@ -4,10 +4,8 @@
       <ThemeToggle />
     </div>
     <NavBar />
-    <main class="md:pt-20 pb-24 md:pb-8 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto">
-        <RouterView />
-      </div>
+    <main class="md:pt-20 pb-24 md:pb-8">
+      <RouterView />
     </main>
   </div>
 </template>
@@ -39,5 +37,11 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
+}
+
+/* Improved focus states */
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
 }
 </style>
