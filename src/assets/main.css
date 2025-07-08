@@ -121,3 +121,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Responsive Typography Utilities */
+  .text-responsive-hero {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  .text-responsive-heading {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .text-responsive-subheading {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .text-responsive-body {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+
+  .text-responsive-small {
+    @apply text-xs sm:text-sm md:text-base;
+  }
+}

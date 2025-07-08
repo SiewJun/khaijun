@@ -4,12 +4,12 @@
       <!-- Hero Section -->
       <div class="text-center mb-20">
         <div class="mb-16">
-          <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-4">Hi, I'm Khai Jun</h1>
-          <p class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h1 class="text-responsive-hero font-bold text-foreground mb-4">Hi, I'm Khai Jun</h1>
+          <p class="text-responsive-subheading text-muted-foreground mb-8 max-w-2xl mx-auto">
             Software Engineering student passionate about building impactful applications and
             solutions
           </p>
-          <p class="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+          <p class="text-responsive-body text-muted-foreground mb-8 max-w-xl mx-auto">
             From Cheras, Selangor • Final Year Student at Universiti Malaysia Sabah
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
