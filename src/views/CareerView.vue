@@ -5,7 +5,7 @@
   >
     <!-- Work Experience -->
     <div class="mb-16">
-      <h2 class="text-responsive-heading text-foreground mb-8">Work Experience</h2>
+      <h2 class="text-responsive-subheading text-foreground mb-8">Work Experience</h2>
 
       <UnifiedCard
         title="Frontend Developer Intern"
@@ -49,7 +49,7 @@
 
     <!-- Technical Skills -->
     <div class="mb-16">
-      <h2 class="text-responsive-heading text-foreground mb-8">Technical Skills</h2>
+      <h2 class="text-responsive-subheading text-foreground mb-8">Technical Skills</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <UnifiedCard
@@ -100,7 +100,7 @@
 
     <!-- Education -->
     <div>
-      <h2 class="text-responsive-heading text-foreground mb-8">Education</h2>
+      <h2 class="text-responsive-subheading text-foreground mb-8">Education</h2>
 
       <div class="space-y-6">
         <UnifiedCard
