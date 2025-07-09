@@ -36,49 +36,49 @@ const projects = [
     description:
       'Built a static website with HTML, CSS, and Bootstrap for a university competition during my first year.',
     tags: ['HTML', 'CSS', 'Bootstrap'],
-    image: './projects/kjuns-netlify-app.png',
+    image: import.meta.env.BASE_URL + 'projects/kjuns-netlify-app.png',
   },
   {
     title: 'MyKPI (Web Assignment)',
     description:
       'Developed a simple web app to track Key Performance Indicators (KPIs) for university students using PHP.',
     tags: ['PHP', 'MySQL', 'HTML/CSS'],
-    image: './projects/mykpi.png',
+    image: import.meta.env.BASE_URL + 'projects/mykpi.png',
   },
   {
     title: 'TourTailor (Web Assignment)',
     description:
       'Developed a travel booking website with Laravel, PHP, and Bootstrap for seamless user experience.',
     tags: ['Laravel', 'PHP', 'Bootstrap'],
-    image: './projects/tourtailor-web.png',
+    image: import.meta.env.BASE_URL + 'projects/tourtailor-web.png',
   },
   {
     title: 'TourTailor Kotlin (Mobile Assignment)',
     description:
       'Developed a travel booking app with Kotlin, Room for database management, and Firebase authentication.',
     tags: ['Kotlin', 'Room', 'Firebase'],
-    image: './projects/tourtailor-kotlin.png',
+    image: import.meta.env.BASE_URL + 'projects/tourtailor-kotlin.png',
   },
   {
     title: 'JadepotCEX (Self-Learning)',
     description:
       'Created a prototype cryptocurrency exchange platform using PostgreSQL, Express.js, React.js, Node.js, and Coinbase API integration.',
     tags: ['PERN Stack', 'Coinbase API', 'Cryptocurrency'],
-    image: './projects/jadepotcex.png',
+    image: import.meta.env.BASE_URL + 'projects/jadepotcex.png',
   },
   {
     title: 'Next.js Dashboard (Self-Learning)',
     description:
       'Learned Next.js using the course provided by Vercel, building a comprehensive dashboard application.',
     tags: ['Next.js', 'React', 'Vercel'],
-    image: './projects/nextjs-dashboard.png',
+    image: import.meta.env.BASE_URL + 'projects/nextjs-dashboard.png',
   },
   {
     title: 'EcoSync (Final Year Project)',
     description:
       'Developed a platform connecting consumers with solar companies for quotations and communication using PERN stack with Google Maps integration.',
     tags: ['PERN Stack', 'Google Maps', 'Stripe'],
-    image: './projects/ecosync.png',
+    image: import.meta.env.BASE_URL + 'projects/ecosync.png',
   },
 ]
 </script>
