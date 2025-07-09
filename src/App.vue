@@ -11,7 +11,7 @@
     <Button
       v-if="showScrollTop"
       @click="scrollToTop"
-      class="fixed bottom-8 right-8 z-50 p-3 rounded-full shadow-lg transition-opacity hover:opacity-80 focus:outline-none"
+      class="fixed bottom-24 right-8 z-50 p-3 rounded-full shadow-lg transition-opacity hover:opacity-80 focus:outline-none"
       aria-label="Scroll to top"
     >
       <ChevronUp class="w-6 h-6" />
